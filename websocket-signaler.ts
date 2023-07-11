@@ -36,7 +36,6 @@ export class WebSocketSignaler implements SignalTransmitter, SignalReceiver {
   }
 
   onPacket (pkt: SignalPacket) {
-    debugger
     const { src, connectionID, type } = pkt
     switch (type) {
       case SignalPacketType.CANDIDATE: {
